@@ -125,6 +125,35 @@ nav ul li {
 	background-color: #000000;
 }
 
+/*эффект ветра*/
+.shake-menu{
+	background-color: #C5CAE9;
+	border-radius: 10px;
+}
+.shake-menu li{
+	width: 20%;
+	border-radius: 5px;
+	background-color: #1A237E;
+	color: white;
+	font-weight: bold;
+	font-family: cursive;
+	font-width: 140%;
+	transform-origin: 50% 0;
+}
+
+@keyframes shake {
+	33%{
+		transform:rotate(10deg);
+	}
+	66%{
+		transform:rotate(-10deg);
+	}
+}
+
+.shake-menu:hover li{
+	animation: shake 0.5s 1 ease;
+}
+
 /*общее для всех hover эффектов*/
 .galery .photo{
 	position: relative;
