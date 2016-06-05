@@ -75,6 +75,56 @@ nav ul li {
 	text-shadow: 3px 8px  4px gray;
 	transition: all 1s ease 0s;
 }
+
+/*dropdown меню*/
+.dropdown-menu, .dropdown{
+	background:#212121;
+	padding: 0;
+}
+
+.dropdown-menu > li{
+	box-sizing:border-box;
+	width: 24.5%;
+	margin: 0;
+	padding: 10px 0;
+	font-size: 140%;
+	font-family: cursive;
+	color:white;
+	cursor: pointer;
+	position: relative;
+}
+
+.dropdown{
+	display: block;
+	overflow: hidden;
+	margin: 0;
+	height: 0;
+	opacity: 0;
+	width: 100%;
+	position:absolute;
+	margin-top: 10px;
+	overflow: hidden;
+	z-index: 1;
+}
+
+.dropdown > li{
+	margin: 0;
+	margin-left: -40px;
+	display:block;
+	text-align: center;
+	width: 120%;
+}
+
+.dropdown-menu > li:hover .dropdown{
+	height: auto;
+	opacity: 1;
+	transition: opacity 0.5s ease 0s;
+}
+
+.dropdown-menu > li:hover, .dropdown > li:hover{
+	background-color: #000000;
+}
+
 /*общее для всех hover эффектов*/
 .galery .photo{
 	position: relative;
@@ -253,7 +303,6 @@ nav ul li {
 	transition:width 1s ease 0s;
 }
 
-
 @media screen and (max-width:768px){
 	main{
 		width: 95%;
@@ -273,5 +322,9 @@ nav ul li {
 		display: block;
 		width: 90%;
 		margin: 5px auto;
+	}
+
+	.dropdown-menu > li{
+		width: 100%;
 	}
 }
