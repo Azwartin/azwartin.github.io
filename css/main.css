@@ -332,6 +332,46 @@ nav ul li {
 	transition:width 1s ease 0s;
 }
 
+.hover-6 .bot{
+	position:absolute;
+	width: 100%;
+	bottom: 0;
+	background-color: #C2185B;
+}
+
+.hover-6 .bot input{
+	display:inline-block;
+	width: 70%;
+	padding: 5px;
+	border-radius: 2px;
+}
+
+.hover-6 .bot button{
+	display:inline-block;
+	width: 15%;
+	height: 100%;
+	padding: 6px;
+	border: 1px solid lightgray;
+	border-radius: 2px;
+	color: white;
+	font-weight:bold;
+	float:right;
+	background-color: #880E4F;
+	cursor:pointer;
+}
+
+.hover-6 .bot, .hover-6 .title, .hover-6 .form{
+	margin-top: 0;
+	transform: translate(0, 300px);
+	transition:transform 1s ease 0s;
+}
+
+.hover-6:hover .bot, .hover-6:hover .title, .hover-6:hover .form{
+	transform: translate(0, 0);
+	transition:transform 1s ease 0s;
+}
+
+
 @media screen and (max-width:768px){
 	main{
 		width: 95%;
