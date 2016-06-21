@@ -20,7 +20,7 @@ h2{
 }
 
 *{
-	transition: all 1s ease 0s;
+	transition: all 1s ease 0s;/*красивые переходы*/
 }
 /*общее для всех меню*/
 nav{
@@ -125,6 +125,65 @@ nav ul li {
 	background-color: #000000;
 }
 
+.shake-title {
+	font-size: 200%;
+	font-family: cursive;
+	font-weight: bold;
+}
+
+.shake-title .letter {
+	display: inline-block;
+	transform: translate(0px, 0px);
+}
+
+.shake-title:hover .letter {
+	transform: translate(0px, -10px);
+}
+
+.shake-title:hover .l1, .shake-title .l11 {
+	transition: transform 1s ease 0s;
+}
+
+.shake-title:hover .l2, .shake-title .l10 {
+	transition: transform 1s ease 0.1s;
+}
+
+.shake-title:hover .l3, .shake-title .l9 {
+	transition: transform 1s ease 0.2s;
+}
+
+.shake-title:hover .l4, .shake-title .l8 {
+	transition: transform 1s ease 0.3s;
+}
+
+.shake-title:hover .l5, .shake-title .l7 {
+	transition: transform 1s ease 0.4s;
+}
+
+.shake-title:hover .l6, .shake-title .l6 {
+	transition: transform 1s ease 0.5s;
+}
+
+.shake-title:hover .l7, .shake-title .l5 {
+	transition: transform 1s ease 0.6s;
+}
+
+.shake-title:hover .l8, .shake-title .l4 {
+	transition: transform 1s ease 0.7s;
+}
+
+.shake-title:hover .l9, .shake-title .l3 {
+	transition: transform 1s ease 0.8s;
+}
+
+.shake-title:hover .l10, .shake-title .l2 {
+	transition: transform 1s ease 0.9s;
+}
+
+.shake-title:hover .l11, .shake-title .l1 {
+	transition: transform 1s ease 1s;
+}
+
 /*эффект ветра*/
 .shake-menu{
 	background-color: #C5CAE9;
@@ -214,7 +273,6 @@ nav ul li {
 .photo:hover .face{
 	opacity: 1;
 	transition: opacity 1s ease 0s;
-	display: block;
 	background-color: rgba(66, 66, 66, 0.7);
 }
 /*hover-эффект 1*/
@@ -371,6 +429,109 @@ nav ul li {
 	transition:transform 1s ease 0s;
 }
 
+.hover-7 .title{
+	opacity: 0;
+	transform: skew(89deg, 89deg);
+	transition:transform opacity 1s ease 1s;
+}
+
+.hover-7:hover .title{
+	opacity: 1;
+	transform: skew(0deg, 0deg);
+	transition:transform opacity 1s ease 1s;
+}
+
+.hover-7 .buttons{
+	margin-top: 10%;
+	text-align: center;
+}
+
+.hover-7 .buttons a{
+	box-sizing: border-box;
+	display: inline-block;
+	text-decoration: none;
+	color: black;
+	width: 10%;
+	font-size: 120%;
+	font-family: cursive;
+	font-weight: bold;
+	text-align: center;
+	vertical-align: middle;
+	border: none;
+	border-radius: 10px;
+	background-color: rgba(255, 255, 255, 0);
+	border: 1px solid rgba(0, 0, 0, 0);
+}
+
+.hover-7 .buttons .top{
+	transform: translate(0, -300px) rotate(360deg);
+	transition:transform 1s ease 0s;
+}
+
+.hover-7 .buttons .left{
+	transform: translate(-300px, 0) rotate(360deg);
+	transition:transform 1s ease 0s;
+}
+
+.hover-7 .buttons .right{
+	transform: translate(300px, 0) rotate(360deg);
+	transition:transform 1s ease 0s;
+}
+
+.hover-7 .buttons .bot{
+	transform: translate(0, 300px) rotate(360deg);
+	transition:transform 1s ease 0s;
+}
+
+.hover-7 .buttons a:hover{
+	border: 1px solid lightblue;
+}
+
+.hover-7:hover .top, .hover-7:hover .right, .hover-7:hover .left, .hover-7:hover .bot{
+	transform: translate(0, 0) rotate(0deg);
+	transition:transform opacity 1s ease 0s;
+}
+
+.hover-8 {
+	text-align: center;
+	position:relative;
+	padding: 20px;
+}
+
+.hover-8 .face{
+	opacity: 0;
+	position:absolute;
+	z-index: -1;
+	width:100%;
+	height:100%;
+	top: 0;
+	left: 0;
+	transition: opacity 1s ease 0s;
+}
+
+.hover-8 img{
+	position:relative;
+	z-index: 0;
+	box-sizing: border-box;
+	display:inline-block;
+	margin: 0;
+	width: 30%;
+	transform: rotate(-10deg);
+	transition: transform 0.5s ease 0s;
+}
+
+.hover-8 img:hover{
+	transform: rotate(0deg);
+	transition: transform 0.5s ease 0s;
+	z-index:11;
+}
+
+.hover-8 img:hover + .face {
+	z-index: 10;
+	opacity: 1;
+	transition: opacity 1s ease 0s;
+	background-color: rgba(66, 66, 66, 0.7);
+}
 
 @media screen and (max-width:768px){
 	main{
