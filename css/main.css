@@ -5,6 +5,7 @@ html, body{
 
 body{
 	background:linear-gradient(to top, #3949AB, #9FA8DA);
+	padding-bottom: 40px;
 }
 
 main {
@@ -531,6 +532,101 @@ nav ul li {
 	opacity: 1;
 	transition: opacity 1s ease 0s;
 	background-color: rgba(66, 66, 66, 0.7);
+}
+
+.btn {
+	text-decoration: none;
+	position: relative;
+	z-index: 1;
+	padding: 5px 10px;
+	background-color: transparent;
+	color: white;
+	border: 1px solid white;
+	overflow: hidden;
+	transition: color 1s ease;
+}
+
+.btn:hover {
+	color: black;
+}
+
+.circle-bg {
+	position: absolute;
+	background-color: white;
+	width: 20px;
+	height: 20px;
+	top: calc(50% - 10px);
+	left: calc(50% - 10px);
+	transform:scale(0);
+	border-radius: 100%;
+	transition: transform 1s linear;
+	z-index: -1;
+}
+
+.radial-hover {
+	position: relative;
+}
+
+.radial-hover:hover > .circle-bg {
+	transform: scale(10);
+}
+
+.multi-radial-hover {
+	position: relative;
+}
+
+.multi-radial-hover:hover > .circle-bg {
+	transform: scale(10);
+}
+
+.pink {
+	background-color: #e91e63;
+	transition: transform 1s linear 0s;
+	z-index: -1;
+}
+
+.purple {
+	background-color: #9c27b0;
+	transition: transform 1s linear 0.5s;
+	z-index: -2;
+}
+
+.blue {
+	background-color: #3f51b5;
+	transition: transform 1s linear 1s;
+	z-index: -3;
+}
+
+.yellow {
+	background-color: #ffb300;
+	transition: transform 1s linear 1.5s;
+	z-index: -4;
+}
+
+.green {
+	background-color: #76ff03;
+	transition: transform 1s linear 2s;
+	z-index: -5;
+}
+
+.multi-radial-hover:hover > .pink {
+	transition: transform 1s linear 2s;
+}
+
+.multi-radial-hover:hover > .purple {
+	transition: transform 1s linear 1.5s;
+}
+
+.multi-radial-hover:hover > .blue {
+	transition: transform 1s linear 1s;
+}
+
+.multi-radial-hover:hover > .yellow {
+	transition: transform 1s linear 0.5s;
+}
+
+.multi-radial-hover:hover > .green {
+	transition: transform 1s linear 0s;
 }
 
 @media screen and (max-width:768px){
